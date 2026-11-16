@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#6257d9">
+  <meta name="description" content="Aprende a gerir o dinheiro com jogos e desafios divertidos.">
+  <link rel="manifest" href="./manifest.webmanifest">
+  <link rel="icon" href="./icons/icon-192.png">
+  <link rel="apple-touch-icon" href="./icons/icon-192.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Pequenos Gestores</title>
+</head>
+<body>
+  <header class="top">
+    <div class="brand"><div class="mascot">🐷</div><div><h1>Pequenos Gestores</h1><p>Aprender a gerir, brincar a poupar!</p></div></div>
+    <div class="score">⭐ <span id="points">0</span> pontos</div>
+  </header>
+  <main id="app" class="wrap">
+    <section id="home" class="screen">
+      <div class="hero"><div><span class="eyebrow">A tua aventura começa aqui</span><h2>Olá, pequeno gestor! 👋</h2><p>Descobre como cuidar do teu dinheiro através de jogos e desafios.</p></div><div class="hero-art">💰🎯🪙</div></div>
+      <h2 class="section-title">Escolhe a tua aventura</h2>
+      <div class="tiles">
+        <button class="tile purple" data-go="quiz"><span class="tile-icon">🧠</span><span><b>Quiz financeiro</b><small>Responde a perguntas e ganha pontos.</small></span><span class="arrow">›</span></button>
+        <button class="tile green" data-go="shop"><span class="tile-icon">🛒</span><span><b>Vamos às compras</b><small>Gere um orçamento de 5 €.</small></span><span class="arrow">›</span></button>
+        <button class="tile yellow" data-go="saving"><span class="tile-icon">🐷</span><span><b>Desafio da poupança</b><small>Aprende a guardar dinheiro.</small></span><span class="arrow">›</span></button>
+      </div>
+      <aside class="tip"><b>💡 Sabias que...?</b><p>Poupar pequenas quantias regularmente pode ajudar-te a alcançar um objetivo no futuro!</p></aside>
+    </section>
+
+    <section id="quiz" class="screen hidden">
+      <button class="back" data-go="home">← Voltar</button>
+      <div class="panel">
+        <div class="row-between"><span class="pill">🧠 Quiz financeiro</span><b id="q-count">Pergunta 1 de 5</b></div>
+        <div class="progress"><span id="q-progress"></span></div>
+        <h2 id="q-text"></h2><p class="muted">Escolhe uma resposta:</p>
+        <div id="q-options" class="options"></div>
+        <div id="q-feedback" aria-live="polite"></div>
+        <button id="q-next" class="primary hidden">Próxima pergunta</button>
+      </div>
+    </section>
+
+    <section id="quizend" class="screen hidden">
+      <div class="panel centered"><div class="big-emoji">🏆</div><h2>Parabéns!</h2><p>Terminaste o quiz financeiro.</p><div class="result" id="quiz-result"></div><button class="primary" id="quiz-retry">Jogar novamente</button><button class="secondary" data-go="home">Voltar ao início</button></div>
+    </section>
+
+    <section id="shop" class="screen hidden">
+      <button class="back" data-go="home">← Voltar</button>
+      <div class="panel">
+        <span class="pill green-pill">🛒 Jogo das compras</span><h2>Vamos às compras!</h2><p class="muted">Tens 5 € para comprar produtos. Escolhe sem ultrapassar o orçamento.</p>
+        <div class="budget"><small>DINHEIRO DISPONÍVEL</small><strong id="remaining">5,00 €</strong><div class="budgetbar"><span id="budget-fill"></span></div><small id="spent-label">Já gastaste 0 € de 5 €</small></div>
+        <h3>Escolhe os teus produtos</h3><div id="products" class="products"></div>
+        <div class="basket"><b>🧺 O teu cesto</b><div id="basket-items" class="muted">Ainda não escolheste produtos.</div><b id="basket-total">Total: 0 €</b></div>
+        <p id="shop-message" class="feedback"></p><button class="secondary" id="shop-reset">Recomeçar compras</button>
+      </div>
+    </section>
+
+    <section id="saving" class="screen hidden">
+      <button class="back" data-go="home">← Voltar</button>
+      <div class="panel">
+        <span class="pill yellow-pill">🐷 Desafio da poupança</span><div class="big-emoji">🐷💰</div>
+        <h2>Ajuda o teu mealheiro!</h2>
+        <p><b>Queres comprar uma bicicleta que custa 20 €. Já tens 10 €. O que deves fazer?</b></p>
+        <div id="saving-options" class="options"></div><div id="saving-feedback" aria-live="polite"></div>
+        <button class="primary hidden" id="saving-again">Jogar novamente</button>
+      </div>
+    </section>
+  </main>
+  <footer>PEQUENOS GESTORES · APRENDER A POUPAR É DIVERTIDO!</footer>
+  <script src="./app.js" defer></script>
+</body>
+</html>

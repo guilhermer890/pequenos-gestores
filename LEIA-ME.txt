@@ -1,0 +1,43 @@
+PEQUENOS GESTORES — PWA v1
+================================
+
+O que está incluído:
+- Quiz financeiro com 5 perguntas
+- Jogo das compras com orçamento fictício de 5 €
+- Desafio da poupança
+- Pontuação durante a utilização
+- Manifesto PWA, ícones e service worker para cache offline
+
+PUBLICAR GRATUITAMENTE COM GITHUB PAGES
+1. Num computador, cria/inicia sessão numa conta GitHub.
+2. Cria um repositório novo, por exemplo: pequenos-gestores.
+3. Carrega TODOS os ficheiros e a pasta icons para a raiz do repositório.
+4. Abre Settings > Pages.
+5. Em Build and deployment, escolhe Deploy from a branch.
+6. Escolhe a branch main e a pasta /(root), depois Save.
+7. Aguarda a publicação. O GitHub apresenta o endereço do site na secção Pages.
+8. Abre esse endereço no telemóvel. O site tem de estar em HTTPS para a instalação PWA.
+
+INSTALAR NO IPHONE (Safari)
+1. Abre o endereço publicado no Safari.
+2. Toca em Partilhar.
+3. Escolhe Adicionar ao ecrã principal.
+4. Confirma em Adicionar.
+
+INSTALAR NO ANDROID (Chrome)
+1. Abre o endereço publicado no Chrome.
+2. Toca no menu ⋮.
+3. Escolhe Instalar aplicação ou Adicionar ao ecrã principal (o texto pode variar).
+4. Confirma.
+
+TESTAR
+- Abre a aplicação e experimenta os três jogos.
+- Depois da primeira visita com internet, ativa o modo de avião e testa novamente.
+- Se alterares os ficheiros, muda o valor CACHE em sw.js (por exemplo, pequenos-gestores-v2) para forçar a atualização da cache.
+
+NOTAS IMPORTANTES
+- Esta é uma primeira versão de demonstração. Os pontos não ficam guardados depois de fechar/recarregar a aplicação.
+- Não recolhe nomes, fotografias ou dados pessoais das crianças.
+- Não inclui contas, publicidade, pagamentos ou recolha de dados.
+- Para utilizar com crianças numa escola, confirma a autorização do estabelecimento e de um adulto responsável.
+- O GitHub Pages publica o conteúdo do repositório; não carregues dados pessoais nem documentos privados.
